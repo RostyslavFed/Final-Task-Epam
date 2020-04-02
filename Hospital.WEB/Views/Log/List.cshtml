@@ -1,0 +1,69 @@
+﻿@model Hospital.WEB.Models.ViewModels.LogViewModels.LogListViewModel
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div>
+	<h2>List logs</h2>
+
+	@using (Html.BeginForm("Clear", "Log", FormMethod.Post))
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form-horizontal">
+			<div class="col-md-10">
+				<input type="submit" value="Clear logs" class="btn btn-default" />
+			</div>
+		</div>
+	}
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Logs.FirstOrDefault().Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logs.FirstOrDefault().Ip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logs.FirstOrDefault().Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logs.FirstOrDefault().ControllerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logs.FirstOrDefault().ActionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logs.FirstOrDefault().Date)
+        </th>
+    </tr>
+
+@foreach (var item in Model.Logs) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ControllerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+    </tr>
+}
+</table>
+<br />
+<div class="btn-group">
+	@Html.PageLinks(Model.PageInfo, x => Url.Action("List", new { page = x }))
+</div>

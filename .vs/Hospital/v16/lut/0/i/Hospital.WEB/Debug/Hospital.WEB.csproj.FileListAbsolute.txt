@@ -1,0 +1,6 @@
+D:\Projects Visual Studio\Epam\Final Task\Hospital\.vs\Hospital\v16\lut\0\b\Hospital.WEB\bin\Hospital.WEB.dll.config
+D:\Projects Visual Studio\Epam\Final Task\Hospital\.vs\Hospital\v16\lut\0\b\Hospital.WEB\bin\Hospital.WEB.dll
+D:\Projects Visual Studio\Epam\Final Task\Hospital\.vs\Hospital\v16\lut\0\i\Hospital.WEB\Debug\Hospital.WEB.csprojAssemblyReference.cache
+D:\Projects Visual Studio\Epam\Final Task\Hospital\.vs\Hospital\v16\lut\0\i\Hospital.WEB\Debug\Hospital.WEB.csproj.CoreCompileInputs.cache
+D:\Projects Visual Studio\Epam\Final Task\Hospital\.vs\Hospital\v16\lut\0\i\Hospital.WEB\Debug\Hospital.WEB.csproj.CopyComplete
+D:\Projects Visual Studio\Epam\Final Task\Hospital\.vs\Hospital\v16\lut\0\i\Hospital.WEB\Debug\Hospital.WEB.dll

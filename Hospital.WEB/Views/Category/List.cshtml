@@ -1,0 +1,33 @@
+﻿@model Hospital.WEB.Models.ViewModels.CategoryViewModels.CategoryListViewModel
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Categories.FirstOrDefault().Name)
+		</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+@foreach (var item in Model.Categories) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+
+            @Html.ActionLink("Personnel", "List", "Employee", new { categoryId=item.Id }, null)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
